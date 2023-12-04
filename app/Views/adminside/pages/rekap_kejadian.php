@@ -1,6 +1,7 @@
 <?= $this->extend('adminside/layout/templateadmin'); ?>
 
 <?= $this->section('content'); ?>
+<link href="css/styles.css" rel="stylesheet" />
             <main>
                 <div class="container-fluid px-4">
                     <h3 class="mt-4"> <b>REKAP KEJADIAN</b></h3>
@@ -18,7 +19,8 @@
                                     <div style="float: right;padding-right: 30px;margin-top: -3px;">
                                         <a class="btn btn-success btn-sm"><i class="fa fa-plus"></i> &nbsp;Tambah</a>
                                     </div>
-                                    <div style="float: right;padding-right: 80px;">
+                                    <div style="float: right;margin-right: 100px;margin-top: -3px;">
+                                    
                                         <select id="select-state" placeholder="Pick a state..." data-mdb-filter="true" style="width: 150px;margin-right: 5px;">
                                             <option value="">-Pilih Bulan-</option>
                                             <option value="JA">Januari</option>
@@ -42,9 +44,14 @@
                                             <option value="">2021</option>
                                             <option value="">2020</option>
                                             <option value="">2019</option>
-                                        </select>
-                                        <button class="btn btn-primary" id="btnNavbarSearch" type="button" style="margin-top: -5px;"><i
-                                            class="fas fa-search"></i></button>
+                                        </select> &nbsp;
+
+                                        <a class="btn btn-primary btn-sm"><i class="fas fa-search"></i></a>&nbsp;
+                                        <a class="btn btn-info btn-sm"><i class="fa-solid fa-print" style= "color: #ebeaea;"></i></a>
+                                        <!-- <button class="btn btn-primary" id="btnNavbarSearch" type="button" style="margin-top: -5px;"><i class="fas fa-search"></i>
+                                        </button> &nbsp;
+                                            <button class="btn btn-info" id="btnNavbarSearch" type="button" style="margin-top: -5px;"><i class="fa-solid fa-print" style="color: #ebeaea;"></i>
+                                        </button> -->
                                     </div>
                                     <b>REKAP KEJADIAN</b>
                                 </div>
@@ -56,7 +63,7 @@
                                     <tr>
                                         <th width="20">No</th>
                                         <th width="250">Judul Berita</th>
-                                        <th width="300">Isi Berita</th>
+                                        <th width="350">Isi Berita</th>
                                         <th width="200">Gambar</th>
                                         <th width="150">Hari/Tanggal</th>
                                         <th width="200">Link</th>
@@ -65,13 +72,13 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="text-align: center;">1</td>
+                                        <th class = "tampilantabel" >1</th>
                                         <td>Tiger Nixon</td>
                                         <td>System Architect</td>
                                         <td>Edinburgh</td>
-                                        <td style="text-align: center;">61</td>
-                                        <td style="text-align: center;">20/04/2323</td>
-                                        <td style="text-align: center;">
+                                        <td class = "tampilantabel" >61</td>
+                                        <td class = "tampilantabel" >20/04/2323</td>
+                                        <td class = "tampilantabel" >
                                             <span class="action_btn">
                                                 <a class="btn btn-warning btn-sm" href="#" > <i class="fa-solid fa-pen-to-square" alt="edit"></i> </a>
                                                 <a class="btn btn-danger btn-sm" href="#"> <i class="fa-solid fa-trash" alt="delete"></i> </a>
@@ -79,13 +86,13 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: center;">2</td>
+                                        <th>2</th>
                                         <td>Garrett Winters</td>
                                         <td>Accountant</td>
                                         <td>Tokyo</td>
-                                        <td>63</td>
-                                        <td>2011/07/25</td>
-                                        <td style="text-align: center;">
+                                        <td class = "tampilantabel" >63</td>
+                                        <td class = "tampilantabel" >2011/07/25</td>
+                                        <td class = "tampilantabel" >
                                             <span class="action_btn">
                                                 <a class="btn btn-warning btn-sm" href="#" > <i class="fa-solid fa-pen-to-square" alt="edit"></i> </a>
                                                 <a class="btn btn-danger btn-sm" href="#"> <i class="fa-solid fa-trash" alt="delete"></i> </a>

@@ -13,10 +13,10 @@
                             Laporan Masuk
                         </a> -->
                         <!-- <div class="sb-sidenav-menu-heading">IKM</div> -->
-                        <a class="nav-link" href="ikm.html">
+                        <!-- <a class="nav-link" href="ikm.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-regular fa-comments"></i></div>
                             Index Kepuasan Masyarakat
-                        </a>
+                        </a> -->
                         <div class="sb-sidenav-menu-heading">Lainnya</div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -29,7 +29,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="/berita">Berita</a>
                                 <a class="nav-link" href="/regulasi">Regulasi</a>
-                                <a class="nav-link" href="/">Documentation</a>
+                                <a class="nav-link" href="/dokumentasi">Dokumentasi</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -41,8 +41,7 @@
                         <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/rekap_laporan">Rekap Laporan</a>
-                                <a class="nav-link" href="/rekap_kejadian">Rekap Kejadian</a>
+                                <a class="nav-link" href="/rekap_kejadian">Laporan Kejadian</a>
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Addons</div>
@@ -55,9 +54,9 @@
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link" href="manage_user.html">
+                                <a class="nav-link" href="/manage_user">
                                     <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
-                                    Manage User
+                                    Management User
                                 </a>
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                     data-bs-target="#pagesCollapseAuth" aria-expanded="false"

@@ -34,7 +34,11 @@ class Home extends BaseController
         return view ('adminside/pages/regulasi');
     }
 
-    public function rekap_laporan() {
-        return view ('adminside/pages/rekap_laporan');
+    public function dokumentasi() {
+        return view ('adminside/Pages/dokumentasi');
+    }
+
+    public function manage_user() {
+        return view ('adminside/Pages/manage_user');
     }
 }

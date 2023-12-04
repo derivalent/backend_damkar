@@ -1,6 +1,7 @@
 <?= $this->extend('adminside/layout/templateadmin'); ?>
 
 <?= $this->section('content'); ?>
+<link href="css/styles.css" rel="stylesheet" />
             <main>
                 <div class="container-fluid px-4">
                     <h3 class="mt-4"><b>DASHBOARD ADMIN</b></h3>
@@ -36,7 +37,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body overflow-auto rounded-lg">
                             <table class="table table-striped">
                                 <thead>
                                     <tr>

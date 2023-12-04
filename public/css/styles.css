@@ -125,9 +125,7 @@ h5,
 .h5,
 h4,
 .h4,
-h3{
-  font-style: italic;
-}
+h3,
 .h3,
 h2,
 .h2,
@@ -372,13 +370,25 @@ th {
 
 /* tabel */
 
+.tampilantabel { 
+  text-align: center;
+}
+
 thead,
 tbody,
 tfoot,
 tr,
+
+.table > * {
+  width: 100%;
+  table-layout: fixed;
+
+}
+
 td {
   border: 1px solid rgb(200, 200, 200);
   border-collapse: collapse;
+  /* flex-wrap: wrap; */
 }
 
 th {
@@ -387,6 +397,11 @@ th {
   border-width: 0;
   text-align: center;
   border: 1px solid rgb(200, 200, 200);
+}
+
+.foto_dokumentasi {
+  width: 100px;
+  text-align: center;
 }
 
 label {
@@ -713,6 +728,9 @@ progress {
   .container {
     max-width: 540px;
   }
+  /* .card-header {
+    max-width: 540px;
+  } */
 }
 
 @media (min-width: 768px) {
@@ -722,6 +740,9 @@ progress {
   .container {
     max-width: 720px;
   }
+  /* .card-header {
+    max-width: 720px;
+  } */
 }
 
 @media (min-width: 992px) {
@@ -732,6 +753,9 @@ progress {
   .container {
     max-width: 960px;
   }
+  /* .card-header {
+    max-width: 960px;
+  } */
 }
 
 @media (min-width: 1200px) {
@@ -743,6 +767,9 @@ progress {
   .container {
     max-width: 1140px;
   }
+  /* .card-header{
+    max-width: 1140px;
+  } */
 }
 
 @media (min-width: 1400px) {
@@ -755,6 +782,9 @@ progress {
   .container {
     max-width: 1320px;
   }
+  /* .card-header {
+    max-width: 1320px;
+  } */
 }
 
 .row {
@@ -2084,6 +2114,10 @@ progress {
 .table>tbody,
 .datatable-table>tbody {
   vertical-align: inherit;
+}
+
+.table > tbody > tr > * {
+  vertical-align: middle;
 }
 
 .table>thead {
