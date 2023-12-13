@@ -18,9 +18,9 @@ class Home extends BaseController
         return view ('adminside/pages/indexadmin');
     }
 
-    public function berita() {
-        return view ('adminside/pages/berita');
-    }
+    // public function berita() {
+    //     return view ('adminside/pages/berita');
+    // }
 
     public function popup() {
         return view ('adminside/pages/popup');
@@ -35,10 +35,10 @@ class Home extends BaseController
     }
 
     public function dokumentasi() {
-        return view ('adminside/Pages/dokumentasi');
+        return view ('adminside/pages/dokumentasi');
     }
 
     public function manage_user() {
-        return view ('adminside/Pages/manage_user');
+        return view ('adminside/pages/manage_user');
     }
 }

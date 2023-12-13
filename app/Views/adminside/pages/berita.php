@@ -15,10 +15,10 @@
                         <div class="col-sm-12">
                             <div class="card-header" style="padding-bottom: 20px;">
                                 <div style="padding-top: 15px;">
-                                    <!-- <i class="fa-solid fa-address-book" style="color: #000000;"></i> &nbsp; -->
                                     <i class="fa-regular fa-newspaper" style="color: #000000;"></i> &nbsp;
                                     <div style="float: right;padding-right: 30px;margin-top: -3px;">
-                                        <a class="btn btn-success btn-sm"><i class="fa fa-plus"></i> &nbsp;Tambah</a>
+                                        <a class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalTambah"><i class="fa fa-plus"></i> &nbsp;Tambah </a>
+                                        <!-- <a class="btn btn-success btn-sm" href="/Berita/create"><i class="fa fa-plus"></i> &nbsp;Tambah</a> -->
                                     </div>
                                     <div style="float: right;margin-right: 100px;margin-top: -3px;">
                                     
@@ -63,17 +63,19 @@
                                         <th width="200">Gambar</th>
                                         <th width="150">Hari/Tanggal</th>
                                         <th width="250">Keterangan</th>
-                                        <th width="100">Aksi</th>
+                                        <th width="130">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $i = 1; ?>
+                                    <?php foreach ($berita as $brita) : ?>
                                     <tr>
-                                        <td class = "tampilantabel">1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td class = "tampilantabel">20/04/2323</td>
-                                        <td class = "tampilantabel">abc</td>
+                                        <td class = "tampilantabel" scope="row"><?= $i++; ?></td>
+                                        <td><?= $brita['judul']; ?></td>
+                                        <td><?= $brita['isi']; ?></td>
+                                        <td class="tampilantabel"> <img src="/image/<?= $brita['gambar']; ?>" alt="gambar pemadam" class="foto_dokumentasi"> </td>
+                                        <td class = "tampilantabel"><?= $brita['tanggal']; ?></td>
+                                        <td class = "tampilantabel"><?= $brita['ket_tambahan']; ?></td>
                                         <td class = "tampilantabel">
                                             <span class="action_btn">
                                                 <a class="btn btn-warning btn-sm" href="#" > <i class="fa-solid fa-pen-to-square" alt="edit"></i> </a>
@@ -81,11 +83,12 @@
                                             </span>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <?php endforeach; ?>
+                                    <!-- <tr>
                                         <td class = "tampilantabel">2</td>
                                         <td>Garrett Winters</td>
                                         <td>Accountant</td>
-                                        <td>Tokyo</td>
+                                        <td class="tampilantabel"> <img src="/image/pemadam.jpg" alt="gambar pemadam" class="foto_dokumentasi"> </td>
                                         <td class = "tampilantabel">20/04/2323</td>
                                         <td class = "tampilantabel">abc</td>
                                         <td class = "tampilantabel">
@@ -94,8 +97,7 @@
                                                 <a class="btn btn-danger btn-sm" href="#"> <i class="fa-solid fa-trash" alt="delete"></i> </a>
                                             </span>
                                         </td>
-
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                             <div class="pagination">
@@ -110,6 +112,128 @@
                     </div>
                 </div> 
             </main>
+            <div class="modal fade modal-lg" id="modalTambah" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Data Rekap</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Start Form -->
+                        <form id="bookingForm" action="#" method="" class="needs-validation" novalidate
+                            autocomplete="off">
+                            <!-- Start Input Name -->
+                            <div class="form-group">
+                                <label for="inputName">Nama Pelapor</label>
+                                <input type="text" class="form-control" id="inputName" name="name"
+                                    placeholder="Masukkan nama anda" required />
+                                <small class="form-text text-muted">Please fill your name</small>
+                            </div>
+                            <!-- End Input Name -->
+
+                            <!-- Start Input Email -->
+                            <div class="form-group">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" name="email"
+                                    placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    required />
+                                <small class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <!-- End Input Email -->
+
+                            <!-- Start Input Telephone -->
+                            <div class="form-group">
+                                <label for="inputPhone">Phone</label>
+                                <input type="tel" class="form-control" id="inputPhone" name="phone"
+                                    placeholder="099xxxxxxx" pattern="\d{3}\d{3}\d{3}\d{3}" required />
+                                <small class="form-text text-muted">We'll never share your phone number with
+                                    anyone else.</small>
+                            </div>
+                            <!-- End Input Telephone -->
+
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Default file input example</label>
+                                <input class="form-control" type="file" id="formFile" required>
+                            </div>
+
+                            <!-- Start Input Date , Start Time and End Time -->
+                            <div class="row">
+                                <!-- Start Input Date -->
+                                <div class="form-group col-md-4">
+                                    <label for="inputDate">Date</label>
+                                    <input type="date" class="form-control" id="inputDate" name="date" required />
+                                    <small class="form-text text-muted">Please choose date and time for
+                                        meeting.</small>
+                                </div>
+                                <!-- End Input Date -->
+                                <div class="form-group col-md-4">
+                                    <label for="inputTime">time</label>
+                                    <input type="time" class="form-control" id="inpuTime" name="time" required />
+                                    <small class="form-text text-muted">Please choose date and time for
+                                        meeting.</small>
+                                </div>
+                                <!-- End Input Start Time -->
+                            </div>
+                            <!-- End Input Date , Start Time and End Time -->
+                            <hr />
+
+                            <!-- Start Input Remark -->
+                            <div class="form-group mb-4">
+                                <label for="textAreaRemark">Notes</label>
+                                <textarea class="form-control" name="remark" id="textAreaRemark" rows="2"
+                                    placeholder="Tell us you want more..."></textarea>
+                            </div>
+                            <!-- End Input Remark -->
+
+                            <!-- Start Submit Button -->
+                            <center>
+                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Batal</button>
+                                <button class="btn btn-success" type="submit">Simpan</button>
+                                <!-- <button class="btn btn-success col-lg-2" type="submit">Simpan</button> -->
+                            </center>
+
+                            <!-- End Submit Button -->
+                        </form>
+                        <!-- End Form -->
+                    </div>
+
+                </div>
+                <!-- <div class="modal-footer">
+                    <center><button class="btn btn-primary col-lg-2" type="submit">Submit</button>
+                    </center>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
 <?= $this->endSection(); ?>
             <!-- <main>
                 <div class="container-fluid px-4">
