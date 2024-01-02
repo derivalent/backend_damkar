@@ -1,4 +1,5 @@
 <div id="layoutSidenav_nav">
+<link href="css/styles.css" rel="stylesheet" /> 
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">

@@ -15,8 +15,9 @@ $routes->add('/indexadmin','Home::indexadmin');
 // $routes->add('/berita','home::berita');
 $routes->add('/berita','BeritaController::berita');
 // $rotes->add('/berita','BeritaController::bulan');
-$routes->add('/pop_up','home::popup');
 $routes->add('/rekap_kejadian','home::rekap_kejadian');
 $routes->add('/regulasi','home::regulasi');
 $routes->add('/dokumentasi', 'home::dokumentasi');
 $routes->add('/manage_user', 'home::manage_user');
+
+$routes->get('/berita/(:segment)', 'BeritaController::berita/$1');

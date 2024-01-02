@@ -15,27 +15,30 @@ class BeritaModel extends Model
 
     // Dates
     protected $useTimestamps = true;
+    protected $allowedFields = ['judul','isi','gambar','tanggal','waktu','ket_tambahan'];
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
+    
+    public function getBeritaController($slug = false)
+    {
+        if ($slug == false) {
+            return $this->findAll();
+        }
+        return $this->where(['slug' => $slug])->first();
+    }
 
-    // Validation
-    // protected $validationRules      = [];
-    // protected $validationMessages   = [];
-    // protected $skipValidation       = false;
-    // protected $cleanValidationRules = true;
+    // Tambah tapi gak ketemu controllernya
+    // public function tambah ($data) {
+    //    return $this->db->table('berita')->insert($data);
+    // }
 
-    // Callbacks
-    // protected $allowCallbacks = true;
-    // protected $beforeInsert   = [];
-    // protected $afterInsert    = [];
-    // protected $beforeUpdate   = [];
-    // protected $afterUpdate    = [];
-    // protected $beforeFind     = [];
-    // protected $afterFind      = [];
-    // protected $beforeDelete   = [];
-    // protected $afterDelete    = [];
+    // public function getBeritaController($slug = false) {
+    //     if ($slug == false) {
+    //         return $this->findAll();
+    //     }
 
-    //connet database manual tanpa Model
+    //     return $this->where(['slug' => $slug])->first();
+    // }
 }
