@@ -1,7 +1,6 @@
 <?= $this->extend('adminside/layout/templateadmin'); ?>
 
 <?= $this->section('content'); ?>
-<link href="css/styles.css" rel="stylesheet" /> 
             <main>
                 <div class="container-fluid px-4">
                     <h3 class="mt-4"> <b>BERITA</b></h3>
@@ -49,11 +48,22 @@
 
                                     <a class="btn btn-primary btn-sm"><i class="fas fa-search"></i></a>&nbsp;
                                 </div>
-                                    <b>BERITA</b>
+                                    <b>BERITA</b> &nbsp;
+                                    <!-- <label>
+                                        <select class="datatable-selector">
+                                            <option value="5">5</option>
+                                            <option value="10" selected="">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                        </select> entries per page
+                                     </label> -->
                                 </div>
                             </div>
                         </div>
                         <div class="card-body overflow-auto rounded-lg" >
+                            <div class="outer-wrapper">
+                            <div class ="table-wrapper">
                             <table class="table table-striped">
                                 <thead class="table-primary">
                                     <tr class = "tampilantabel">
@@ -100,14 +110,17 @@
                                     </tr> -->
                                 </tbody>
                             </table>
-                            <div class="pagination">
+                            </div>
+                            </div>
+                            <!-- <div class="pagination">
                                 <div class="btn"><i class="fa-solid fa-angles-left"></i></div>
                                 <div class="btn"><i class="fa-solid fa-angle-left"></i></div>
                                 <div class="btn">1</div>
                                 <div class="btn">2</div>
                                 <div class="btn"><i class="fa-solid fa-angle-right"></i></div>
                                 <div class="btn"><i class="fa-solid fa-angles-right"></i></div>
-                            </div>
+                            </div> -->
+                            <div class="kosong"></div>
                         </div>
                     </div>
                 </div> 
@@ -226,7 +239,6 @@
         </div>
     </div>
 </div>
-
 <!-- ckeditor untuk tampilan insert data mirip word -->
 <!-- <script src="https://cdn.ckeditor.com/4.23.0-lts/full/ckeditor.js"></script>
 <script>
@@ -234,7 +246,6 @@
 </script> -->
 <!-- Script Javascript -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
 <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {

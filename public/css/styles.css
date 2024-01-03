@@ -382,8 +382,14 @@ tr,
 .table > * {
   width: 100%;
   table-layout: fixed;
-
+  /* border: 1px solid black; */
+  border-collapse: separate;
+  border-spacing: 0px;
 }
+
+/* th,td {
+  border: 1px solid black;
+} */
 
 td {
   border: 1px solid rgb(200, 200, 200);
@@ -392,12 +398,27 @@ td {
 }
 
 th {
-  border-color: inherit;
+  /* border-color: inherit;
   border-style: solid;
-  border-width: 0;
+  border-width: 0; */
   text-align: center;
   border: 1px solid rgb(200, 200, 200);
+  position: sticky;
+  top: -2px;
 }
+
+.outer-wrapper {
+  border: 2px solid rgb(200, 200, 200);
+}
+
+.table-wrapper {
+  max-height: 450px;
+  overflow-y: scroll;
+}
+/* tbody {
+  max-height: 300px;
+  overflow-y: scroll;
+} */
 
 .foto_dokumentasi {
   width: 100px;
